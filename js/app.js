@@ -27,7 +27,8 @@ alertBanner.innerHTML = `
     <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete!</p>
     <button class="alert-banner-close">x</button>
   </div>
-`;
+`
+;
 
 alertBanner.addEventListener('click', (e) => {
   const element = e.target;
@@ -93,7 +94,6 @@ function createTrafficChart(data) {
       options: trafficOptions
     });
   }
-  
 
 const trafficNavLinks = document.querySelectorAll('.traffic-nav-link');
 const trafficNavUl = document.querySelector('.traffic-nav');
@@ -157,7 +157,6 @@ trafficNavLinks.forEach(trafficNavLink => {
     data: dailyData,
     options: dailyOptions
   });
-
 
 //Mobile Chart
 const mobileData = {
