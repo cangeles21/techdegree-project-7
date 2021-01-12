@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>YourApp Web Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">  </head>
+    <body class="grid-container">
+      
+      <!-- Header -->
+      <header class="header">
+        <div class="header-container">
+          <div class="web-label"><strong>Your</strong>App&trade;</div>
+          <div class="header-bar">
+            <div class="bell"> 
+              <svg id="bell-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#FFFFFF;}
+                </style>
+                <g id="_x36__6_">
+                    <g>
+                        <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+                            c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                    </g>
+                </g>
+            </svg>
+            <!-- dropdown-content -->
+            <div class="dropdown-content hidden">
+              <a href="#social">Check Twitter</a>
+              <a href="#message">Reply to Jessica Nguyen</a>
+              <a href="#setting">Adjust Settings</a>
+            </div>
+            <div class="badge"></div>
+          </div>
+          <img src="images/profile-image.jpeg" alt="" class="profile-image">
+          <h2>Christian Angeles</h2>
+
+        </div>
+        </div>
+      </header> 
+
+      <!-- side navigation -->
+      <nav>
+        <a><img src="icons/icon-dashboard.svg"></a>
+        <a><img src="icons/icon-members.svg"></a>
+        <a><img src="icons/icon-visits.svg"></a>
+        <a><img src="icons/icon-settings.svg"></a>
+      </nav>
+
+    <main class="main">
+        <div class="main-header">
+            <h2>Dashboard</h2>
+            <div class="main-search">
+              <input type="search" placeholder="SEARCH">
+            </div>
+        </div>
+        <!-- alert -->
+        <div class="alert" id="alert">
+        </div>
+
+        <!-- main traffic -->
+        <section class="traffic">
+          <div class="traffic-container">
+            <h3>Traffic</h3>
+            <ul class="traffic-nav">
+              <li class="traffic-nav-link">Hourly</li>
+              <li class="traffic-nav-link">Daily</li>
+              <li class="traffic-nav-link active">Weekly</li>
+              <li class="traffic-nav-link">Monthly</li>
+            </ul>
+          </div>
+          <div class="widget-container-full">
+            <canvas id="traffic-chart"></canvas>
+          </div>
+        </section>
+        
+        <!-- daily traffic -->
+        <section class="daily-traffic">
+          <h3>Daily Traffic</h3>
+          <div class="split-widget">
+            <canvas id="daily-chart"></canvas>
+          </div>
+        </section>
+
+        <!-- mobile -->
+        <section class="mobile">
+          <h3>Mobile Users</h3>
+          <div class="split-widget">
+            <canvas id="mobile-chart"></canvas>
+          </div>
+        </section>
+
+        <!-- social boxes -->
+        <section class="social-stats" id="social">
+          <h3>Social Stats</h3>
+          <div class="social-box">
+            <div class="social-container">
+              <div class="social-image">
+                <svg class="twitter-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
+              </div>
+              <div class="social-text">
+                <p>Twitter</p>
+                <p class="social-label">10,345</p>
+              </div>
+            </div>
+
+            <div class="social-container">
+              <div class="social-image">
+                <svg class="facebook-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+              </div>
+              <div class="social-text">
+                <p>Facebook</p>
+                <p class="social-label">8,739</p>
+              </div>
+            </div>
+
+            <div class="social-container">
+              <div class="social-image">
+                <svg class="google-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.917 16.083c-2.258 0-4.083-1.825-4.083-4.083s1.825-4.083 4.083-4.083c1.103 0 2.024.402 2.735 1.067l-1.107 1.068c-.304-.292-.834-.63-1.628-.63-1.394 0-2.531 1.155-2.531 2.579 0 1.424 1.138 2.579 2.531 2.579 1.616 0 2.224-1.162 2.316-1.762h-2.316v-1.4h3.855c.036.204.064.408.064.677.001 2.332-1.563 3.988-3.919 3.988zm9.917-3.5h-1.75v1.75h-1.167v-1.75h-1.75v-1.166h1.75v-1.75h1.167v1.75h1.75v1.166z"/></svg>
+              </div>
+              <div class="social-text">
+                <p>Google+</p>
+                <p class="social-label">2,530</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- new members -->
+        <section class="member">
+          <h3>New Members</h3>
+          <div class="member-container">
+            <img src="images/member-1.jpg" class="profile-image" alt="member-1">
+            <div class="member-text">
+              <p>Karen Richards</p>
+              <a href="#">karen.richards12@example.com</a>
+            </div>
+            <p>12/24/2020</p>
+          </div>
+          <div class="member-container">
+            <img src="images/member-2.jpg" class="profile-image" alt="member-2">
+            <div class="member-text">
+              <p>Kyle Summers</p>
+              <a href="#">k.summers@example.com</a>
+            </div>
+            <p>12/28/2020</p>
+          </div>
+          <div class="member-container">
+            <img src="images/member-3.jpg" class="profile-image" alt="member-3">
+            <div class="member-text">
+              <p>Jessica Nguyen</p>
+              <a href="#">Jessica.nguyen213@example.com</a>
+            </div>
+            <p>1/1/2021</p>
+          </div>
+          <div class="member-container">
+            <img src="images/member-4.jpg" class="profile-image" alt="member-4">
+            <div class="member-text">
+              <p>Joe Johnson</p>
+              <a href="#">joe.johnson1@example.com</a>
+            </div>
+            <p>5 hours ago</p>
+          </div>
+        </section>
+        <!-- recent activity -->
+        <section class="activity">
+          <h3>Recent Activity</h3>
+          <div class="activity-container">
+            <img src="images/member-1.jpg" class="profile-image" alt="member-1">
+            <div class="activity-text">
+              <p>Karen Richards  commented on <strong>YourApp's SEO Tips</strong></p>
+              <p>2 days ago</p>
+            </div>
+            <p>&gt;</p>
+            
+          </div>
+          <div class="activity-container">
+            <img src="images/member-2.jpg" class="profile-image" alt="member-2">
+            <div class="activity-text">
+              <p>Kyle Summers liked <strong>Facebook's Changes for 2021</strong></p>
+              <p>1 day ago</p>
+            </div>
+            <p>&gt;</p>
+            
+          </div>
+          <div class="activity-container">
+            <img src="images/member-3.jpg" class="profile-image" alt="member-3">
+            <div class="activity-text">
+              <p> Jessica Nguyen posted <strong>YourApp's SEO Tips</strong></p>
+              <p>13 hours ago</p>
+            </div>
+            <p>&gt;</p>
+            
+          </div>
+          <div class="activity-container">
+            <img src="images/member-4.jpg" class="profile-image" alt="member-4">
+            <div class="activity-text">
+              <p>Joe Johnson commented on <strong>Facebook's Changes for 2021</strong></p>
+              <p>1 hour ago</p>
+            </div>
+            <p>&gt;</p>
+          </div>
+        </section>
+        <!-- message -->
+        <section class="message" id="message">
+          <h3>Message User</h3>
+          <form class="message-container">
+            <input type="text" placeholder="Search for User" class="form-field" id="userField" list="member-list">
+            <datalist id="member-list">
+              <option>Karen Richards</option>
+              <option>Kyle Summers</option>
+              <option>Jessica Nguyen</option>
+              <option>Joe Johnson</option>
+             </datalist>
+             <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+             <button class="button-primary" id="send">Send</button>
+           </form>
+        </section>
+
+        <!-- social -->
+        <section class="settings" id="setting">
+          <h3>Settings</h3>
+          <div class="toggle-container">
+            <h4>Send Email Notifications</h4>
+            <label class="toggle-switch">
+              <input type="checkbox" class="email-switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+
+          <div class="toggle-container">
+            <h4>Set Profile to Public</h4>
+            <label class="toggle-switch">
+              <input type="checkbox" class="email-switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <select id="timezone" class="form-field">
+            <option disabled selected>Select a Timezone</option>
+            <option>Eastern</option>
+            <option>Centrak</option>
+            <option>Pacific</option>
+          </select>
+          <div class="setting-button">
+            <button class="primary-button" id="save">Save</button>
+            <button class="cancel-button" id="cancel">Cancel</button>
+          </div>
+        </section>
+
+      </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+      <script src="js/app.js"></script>
+
+    </body>
+</html>
