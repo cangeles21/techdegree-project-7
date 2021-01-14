@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 :root {
@@ -25,10 +26,6 @@ canvas {
 
 h2 {
     padding: 1rem;
-}
-
-body {
-    font-family: 'Oswald', sans-serif;
 }
 
 /* Header */
@@ -68,6 +65,25 @@ header {
     width: 1.8rem;
     cursor: pointer;
     position: relative;
+}
+
+@keyframes hit {
+    0% {
+}
+    30% {
+        transform: rotate(45deg);
+}
+    60% {
+        transform: rotate(-25deg);
+}
+    80% {
+        transform: rotate(15deg);
+    }
+}
+  
+  svg:hover,
+  .bell-icon {
+    animation: hit 0.6s ease-out 0.3s forwards;
 }
 
 .dropdown-content {
@@ -495,15 +511,13 @@ select[class="form-field"] {
 }
 
 @media (min-width: 768px) {
-.grid-container {
-        display: grid;
-}
 
 .grid-container {
+    display: grid;
     grid-template-columns: 74px 1fr;
     grid-template-areas: 
         "header header"
-        "nav main";
+        "nav main"; 
 }
 
 header {
@@ -604,6 +618,28 @@ nav {
     border-bottom: none;
     border-right: 1px solid darkgray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
