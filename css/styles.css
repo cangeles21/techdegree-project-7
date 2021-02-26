@@ -265,6 +265,7 @@ h3 {
 .social-box {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
+    padding: 1rem;
 }
 
 
@@ -509,7 +510,7 @@ select[class="form-field"] {
     background-color: darkgray;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1026px) {
 
 .grid-container {
     display: grid;
@@ -588,22 +589,6 @@ nav {
     padding: 1.5rem 2rem;
 }
 
-.social-container .social-image {
-    flex-basis: 100px;
-    height: 100px;
-    width: 100px;
-    margin-right: 2.5rem;
-  }
-
-.social-container .social-image svg {
-    transform: scale(1);
-}
-
-.social-container p:nth-child(2) {
-    font-size: 2rem;
-    text-align: center;
-}
-
 .members {
     border-right: 1px solid darkgray;
 }
@@ -617,6 +602,20 @@ nav {
     border-right: 1px solid darkgray;
 }
 
+@media (min-width: 768px) {
+.social-box {
+    display: grid;
+    justify-items: center;
+    grid-gap: 2rem;
+}
 
+.social-container {
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+}
+
+
+}
 }
 
