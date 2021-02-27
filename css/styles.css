@@ -23,8 +23,11 @@ canvas {
     max-width: 100%;
 }
 
-h2 {
-    padding: 1rem;
+h2,
+h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 /* Header */
@@ -40,12 +43,17 @@ header {
     justify-content: space-between;
 }
 
+.header-container h2{
+font-size: 1em;
+padding: .5px;
+}
+
 .header-container > * {
     margin-left: .5rem;
 }
 
 .web-label {
-    font-size: 2rem;
+    font-size: 1.7rem;
     width: fit-content;
 }
 
@@ -129,24 +137,20 @@ header {
 
 .profile-image {
     border-radius: 50%;
-    margin: 0 .8rem 0 .8rem;
+    margin: 0 .5rem 0 .5rem;
     width: 40px;
 }
 
 nav {
-    background-color: #7F557D;
+    background-color: var(--second-color);
     text-align: center;
 }
 
 nav img {
-    height: 2.5em;
+    height: 2em;
     margin: .8em;
 }
 
-h3 {
-    font-size: 24px;
-    padding: 1rem;
-}
 
 /* Main */
 .main {
@@ -156,6 +160,11 @@ h3 {
 .main-header {
     display: grid;
     grid-template-columns: auto 2fr;
+}
+
+.main-header h2 {
+font-size: 1em;
+padding: 1em;
 }
 
 .main-search {
@@ -205,12 +214,14 @@ h3 {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .traffic-container h3 {
     text-align: center;
     font-weight: 800;
+    margin-left: 5px;
+
 }
 
 .traffic-container ul {
@@ -224,13 +235,20 @@ h3 {
 
 .traffic-container li {
     cursor: pointer;
+    font-size: .8em;
+    margin-left: 8px;
 }
-
 
 .traffic-nav {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
 }
+
+li.active {
+    border-radius: 30px;
+    padding: 2px 8px;
+  }
   
 .traffic-nav * {
     margin-left: 1rem;
@@ -314,7 +332,8 @@ h3 {
 /* Members */
 .member {
     border-bottom: 1px solid darkgray;
-    padding: 1rem;
+    padding: 8px 8px 8px 8px;
+    
 }
 
 .member h3 {
@@ -325,13 +344,15 @@ h3 {
     border-bottom: 1px solid darkgray;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
+    font-size: 14px;
 }
 
 .member-container img {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    width: 44px;
-    margin-right: 0.5rem;
+    margin-right: 5px;
 }
 
 .member-container a {
@@ -345,6 +366,11 @@ h3 {
 .member-container:last-child {
     border: none;
 }
+.date {
+    margin-left: auto;
+    margin-bottom: auto;
+    font-size: 12px;
+  }
 
 /* Activity */
 
@@ -361,13 +387,16 @@ h3 {
     border-bottom: 1px solid darkgray;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
+    font-size: 14px;
+
 }
 
 .activity-container img {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    width: 44px;
-    margin-right: 0.5rem;
+    margin-right: 5px;
 }
 
 .activity-container > p {
