@@ -544,7 +544,7 @@ select[class="form-field"] {
     background-color: darkgray;
 }
 
-@media (min-width: 1026px) {
+@media (min-width: 1024px) {
 
 .grid-container {
     display: grid;
